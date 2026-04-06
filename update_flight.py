@@ -10,6 +10,8 @@ ICAO_NAMES = {
     "VHHX": "啓徳空港",
     "RKSI": "仁川国際空港",
     "RJBB": "関西国際空港",
+    "RPLL": "マニラ",
+    "WSSS": "シンガポール",
 }
 
 def safe_get(dct, *keys, default=""):
@@ -31,5 +33,7 @@ aircraft = safe_get(data, "aircraft", "icaocode", default="N/A").upper()
 dep_name = ICAO_NAMES.get(dep, dep)
 arr_name = ICAO_NAMES.get(arr, arr)
 
+text = f"{dep_name} ({dep}) → {arr_name} ({arr}) | {callsign} | {aircraft}"
+
 with open("flight.txt", "w", encoding="utf-8") as f:
-    f.write(f"{dep_name} → {arr_name} | {callsign} | {aircraft}")
+    f.write(text)
