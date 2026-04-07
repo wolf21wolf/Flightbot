@@ -2,8 +2,6 @@ name: Update Flight Text
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "*/10 * * * *"
 
 permissions:
   contents: write
@@ -30,3 +28,4 @@ jobs:
           git add flight.txt
           git diff --cached --quiet || git commit -m "update flight"
           git push
+          
