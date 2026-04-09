@@ -144,6 +144,8 @@ ICAO_NAMES = {
     "RKSI": "仁川国際空港",
     "RPLL": "マニラ",
     "WSSS": "シンガポール",
+    "YSSY": "シドニー",
+    "YMML": "メルボルン",
 }
 
 def safe_get(dct, *keys, default=""):
