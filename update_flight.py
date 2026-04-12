@@ -146,6 +146,7 @@ ICAO_NAMES = {
     "WSSS": "シンガポール",
     "YSSY": "シドニー",
     "YMML": "メルボルン",
+    "PGUM": "グアム国際空港",
 }
 
 def safe_get(dct, *keys, default=""):
